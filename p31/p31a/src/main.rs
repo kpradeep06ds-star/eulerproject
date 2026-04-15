@@ -12,12 +12,16 @@ pub fn count(k:i32) -> i32 {
         // if i  = 10, then loop would go from 10 to 200
         // which means i - coin will always be >= 0
         for i in coin..=target{
+            // fn(i) = fn(i) + fn(i - c)
+            // fn(i=0) => return 1
             ways[i as usize] = ways[i as usize] + ways[i as usize - coin as usize];
         }
     }
     
     ways[k as usize]
 }
+
+
 
 pub fn main(){
     let value = count(200);

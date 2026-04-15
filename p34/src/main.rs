@@ -10,7 +10,7 @@ pub fn digits(num:i32) -> Vec<i32>{
             break;
         }
     }
-    v.reverse();
+    //v.reverse();
     v
 }
 
@@ -20,7 +20,7 @@ fn main() {
     // 7 digit numbers would be 2540160
     // Now question says 3 digit gives 3 digit number so if any factorial combination expands should be out of domain
     // so if we see 8 digits 10**8 - 1 would have 100_000_00 but for this 362880x8 = 2903040, so with even all digits are 9
-    // the maximum possible number can't go beyond 2903040, so we can't go beyond 8 digits or beyond
+    // the maximum possible number can't go beyond 2540160, so we can't go beyond 8 digits or beyond
     let ul:i32 = 2_540_160;
     let factorials = [1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880];
     let mut finalv:Vec<i32> = Vec::new();
