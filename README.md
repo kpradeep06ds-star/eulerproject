@@ -2,7 +2,7 @@
 
 ### 🚀 Self-Taught Programmer | ML & Deep Learning Enthusiast
 
-I am a programmer based in Mumbai, focused on Numerical Linear Algebra, Machine Learning, and mastering the **Rust** programming language. I believe in learning by doing, which is why I'm currently tackling the Project Euler challenges.
+I am a programmer based in Mumbai, focused on Numerical Linear Algebra, Machine Learning, and learning the **Rust** programming language. I believe in learning by doing, which is why I'm currently tackling the Project Euler challenges.
 
 - 🦀 **Currently Learning:** Advanced Rust (Ownership, Traits, and Async)
 - 🧠 **Focus:** Numerical Stability, SVD, and Optimization Algorithms (SGD, Adam)
