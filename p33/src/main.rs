@@ -1,63 +1,62 @@
-fn split_digits(x:i32) -> Vec<i32>{
-    let r:Vec<i32> = x.to_string().chars().map(|c| c.to_digit(10).unwrap() as i32).collect::<Vec<i32>>();
-    r
+fn split_digits(x: i32) -> (i32, i32) {
+    (x / 10, x % 10)
 }
 
-fn uncommon(v1:Vec<i32> , v2:Vec<i32>) -> Vec<i32> {
-    for (id, i) in v1.iter().enumerate(){
-        for (jd, j) in v2.iter().enumerate(){
-            if i == j{
-                return vec![v1[1 - id], v2[1 - jd]];
-            }
-        }
+fn uncommon(n: (i32, i32), d: (i32, i32)) -> Option<(i32, i32)> {
+    let (n1, n2) = n;
+    let (d1, d2) = d;
+
+    if n1 == d1 {
+        Some((n2, d2))
+    } else if n1 == d2 {
+        Some((n2, d1))
+    } else if n2 == d1 {
+        Some((n1, d2))
+    } else if n2 == d2 {
+        Some((n1, d1))
+    } else {
+        None
     }
-    return vec![-1, -1];
 }
 
-fn product(v:Vec<Vec<i32>>) -> Vec<i32>{
-    let mut top =1;
-    let mut down=1;
-
-    for vi in v{
-        top = top*vi[0];
-        down = down*vi[1];
+fn gcd(mut a: i32, mut b: i32) -> i32 {
+    while b != 0 {
+        let r = a % b;
+        a = b;
+        b = r;
     }
-    vec![top, down]
-}
-
-fn gcd(mut a:i32, mut b:i32) -> i32{
-    while a != b{
-        if a > b{
-            a = a - b;
-        } else {
-            b = b - a;
-        }
-    }
-    return a;
+    a.abs()
 }
 
 fn main() {
-    let mut n:Vec<i32>;
-    let mut d:Vec<i32>;
-    let mut pairs: Vec<Vec<i32>> = vec![];
-    let mut uc:Vec<i32>;
-    for num in 11..=99{
-        for denom in (num+1)..=98{
-            if num < denom && num%10 != 0 && denom%10 != 0{
-                n = split_digits(num);
-                d = split_digits(denom);
-                uc = uncommon(n, d);
-                if !uc.contains(&-1){
-                    if uc[0]*denom == uc[1]*num{
-                        pairs.push(vec![num, denom]);
-                    }
-                }
+    let mut pairs: Vec<(i32, i32)> = Vec::new();
 
+    let mut top = 1;
+    let mut down = 1;
+
+    for num in 11..=99 {
+        for denom in (num + 1)..=99 {
+            if num % 10 == 0 || denom % 10 == 0 {
+                continue;
+            }
+
+            let n_digits = split_digits(num);
+            let d_digits = split_digits(denom);
+
+            if let Some((new_num, new_denom)) = uncommon(n_digits, d_digits) {
+                if new_denom != 0 && new_num * denom == new_denom * num {
+                    pairs.push((num, denom));
+                    top *= num;
+                    down *= denom;
+                }
             }
         }
     }
-    let p = product(pairs.clone());
-    let g = gcd(p[0], p[1]);
-    println!("{:?} {:?} {:?} {:?}",&pairs, g, p, p[1]/g);
 
+    let g = gcd(top, down);
+
+    println!("pairs = {:?}", pairs);
+    println!("product = {}/{}", top, down);
+    println!("reduced = {}/{}", top / g, down / g);
+    println!("answer = {}", down / g);
 }
