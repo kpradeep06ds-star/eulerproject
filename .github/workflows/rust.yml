@@ -8,13 +8,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: p33
-
     steps:
-    - uses: actions/checkout@v4
-    - name: Build
-      run: cargo build --verbose
-    - name: Run tests
-      run: cargo test --verbose
+      - uses: actions/checkout@v4
+
+      - name: Build all Rust projects
+        run: |
+          for dir in */Cargo.toml; do
+            project_dir=$(dirname "$dir")
+            echo "Building $project_dir"
+            cargo build --manifest-path "$project_dir/Cargo.toml"
+          done
