@@ -21,6 +21,6 @@ I am a programmer based in Mumbai, focused on Numerical Linear Algebra, Machine 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
 ![NVIDIA](https://img.shields.io/badge/nVIDIA-%2376B900.svg?style=for-the-badge&logo=nVIDIA&logoColor=white)
-
+![Rust](https://github.com/kpradeep06ds-star/eulerproject/actions/workflows/rust.yml/badge.svg)
 ---
 *"Programming is not just about code; it's about understanding the logic behind the numbers."*

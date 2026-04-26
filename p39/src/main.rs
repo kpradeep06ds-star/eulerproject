@@ -20,7 +20,6 @@ fn anlytical_p(p:i64, a:i64) -> i64 {
 // this formula suggest if p is odd then entire expression would be odd
 // if p is even then entire expression is even
 // Now can we determine if either of a or b is even 
-
 // with trial and error we can...but I will write a math proof I got it
 
 // a + b  > c
