@@ -19,7 +19,7 @@ I prefer **learning by building**, which is why I’m solving **Project Euler** 
 
 ### 📊 Project Euler Progress
 
-* 🎯 **Solved:** 31, 32, 55, 89
+* 🎯 **Solved:** All problems until 40
 * 🚧 **Current Goal:** Reach 50 problems (second milestone)
 
 ![Build](https://github.com/kpradeep06ds-star/eulerproject/actions/workflows/rust.yml/badge.svg)
