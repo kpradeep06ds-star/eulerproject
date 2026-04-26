@@ -36,6 +36,12 @@ fn main() {
         // left trim means trimming from left hadn towards right
         // so extending candidates makes sense we are adding right trimmed like 2,3,5,7
         // however we can pop also but not required
+        // Two important learnings -> the left truncation and right truncation is not a 'AND' condition
+        // one must be checked after the other is checked (this sounds like 'AND' but it's not)
+        // because middle digit can contain 9 (I am taking this example because 9 is simple)
+        // 397 is prime also when we trucate right we have all primes BUT,
+        // on left 39 becomes a non prime if you completely remove these sequences, you won't get : 739397
+        // when we check this together that 397 will cause a problem but once it is accomplished that it's a middle segment and left truncation would never reach 39 this must be taken
         let current = candidates[head];
         head += 1;
 

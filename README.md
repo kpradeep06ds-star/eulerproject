@@ -13,7 +13,8 @@ I am a programmer based in Mumbai, focused on Numerical Linear Algebra, Machine 
 
 ### 📊 Project Euler Progress
 - **Solved:** 31 (Coin Sums), 32 (Pandigital Products), 55 (Lychrel Numbers), 89 (Roman Numerals)
-- **Current Challenge:** Optimizing Roman Numeral parsing in Rust.
+- **Current Challenge:** Towards my second badge - 50 problems:)
+
 
 ### 🛠️ Tech Stack
 ![Rust](https://img.shields.io/badge/rust-%23000000.svg?style=for-the-badge&logo=rust&logoColor=white)
