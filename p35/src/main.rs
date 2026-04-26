@@ -1,4 +1,6 @@
 // use std::collections::HashSet;
+// Needed to optimize this
+// Use hashset for lookup
 
 pub fn is_prime(n: i64) -> bool{
     if n < 2{
