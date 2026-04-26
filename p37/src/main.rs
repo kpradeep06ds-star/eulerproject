@@ -19,7 +19,7 @@ pub fn is_prime(n: i64) -> bool{
 }
 
 
-fn create_ndigitnum(v:Vec<i64>) -> i64{
+fn left_truncate_prime(v:Vec<i64>) -> i64{
 
     let mut num:i64 = 0;
     let mut count = 0;
@@ -68,6 +68,20 @@ fn right_truncate_prime(x:i64) -> bool{
     return true;
 }
 
+fn common_loop(s:Vec<i64>) -> Vec<i64> {
+    
+    let mut v:Vec<i64> = Vec::new();
+
+    let tempnum = left_truncate_prime(s);
+    if tempnum != 0  {
+        if !v.contains(&tempnum) {
+            v.push(tempnum);
+        }
+    } 
+    v
+}
+
+
 fn main() {
 
     // these below edge cases we have to figure out by pen paper
@@ -84,41 +98,16 @@ fn main() {
 
     for s1 in s.clone(){
         for s2 in m.clone(){
-            let tempnum = create_ndigitnum(vec![s1, s2]);
-            if tempnum != 0  {
-                if !v.contains(&tempnum) {
-                    v.push(tempnum);
-                }
-            } 
+            v.extend(&common_loop(vec![s1, s2]));
             for s3 in m.clone(){
-                let tempnum = create_ndigitnum(vec![s1, s2, s3]);
-                if tempnum != 0 {
-                    if ! v.contains(&tempnum) {
-                        v.push(tempnum);
-                    }
-                } 
+                v.extend(& common_loop(vec![s1, s2, s3]));
                 for s4 in m.clone(){
-                    let tempnum = create_ndigitnum(vec![s1, s2, s3, s4]);
-                    if tempnum != 0 {
-                        if ! v.contains(&tempnum){
-                            v.push(tempnum);
-                        }
-                    } 
+                    v.extend(& common_loop(vec![s1, s2, s3, s4]));
                     for s5 in m.clone(){
-                        let tempnum = create_ndigitnum(vec![s1, s2, s3, s4, s5]);
-                        if tempnum != 0 {
-                            if ! v.contains(&tempnum){
-                                v.push(tempnum);
-                            }
-                        } 
+                        v.extend(& common_loop(vec![s1, s2, s3,s4, s5]));
                     for s6 in l.clone(){
-                        let tempnum = create_ndigitnum(vec![s1, s2, s3, s4, s5, s6]);
-                        if tempnum != 0 {
-                            if ! v.contains(&tempnum){
-                                v.push(tempnum);
-                            }
-                        } 
-                    }
+                        v.extend(& common_loop(vec![s1, s2, s3, s4, s5, s6]));
+                        }
                     }
                 }
             }
@@ -142,6 +131,7 @@ fn main() {
     // }
 
     vf.sort_unstable();
+    //println!("{:?}", vf);
     println!("{:?} {:?}",vf, vf[0..11].iter().sum::<i64>());
 }
 
