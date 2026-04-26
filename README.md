@@ -8,6 +8,16 @@ I prefer **learning by building**, which is why I’m solving **Project Euler** 
 
 ---
 
+### 📈 GitHub Stats
+
+![Pradeep's GitHub stats](https://github-readme-stats.vercel.app/api?username=kpradeep06ds-star&show_icons=true&theme=tokyonight)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=kpradeep06ds-star&layout=compact&theme=tokyonight)
+
+![GitHub Streak](https://streak-stats.demolab.com?user=kpradeep06ds-star&theme=tokyonight)
+
+
+
 ### 🚀 What I’m Working On
 
 * 🦀 **Rust Deep Dive:** Ownership, Traits, Iterators, and performance patterns
