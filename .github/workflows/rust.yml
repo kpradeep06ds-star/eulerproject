@@ -1,31 +1,24 @@
-name: Update README
+name: Rust
 
 on:
   push:
-    branches: [main]
+    paths:
+      - 'p*/**'
+  pull_request:
+    paths:
+      - 'p*/**'
 
 jobs:
-  update-readme:
+  build:
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: write
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: 3.x
-
-      - name: Run script
-        run: python3 update_readme.py
-
-      - name: Commit changes
+      - name: Check all projects
         run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
-          git add README.md
-          git commit -m "auto-update Euler progress" || echo "No changes"
-          git push
+          for dir in p*/Cargo.toml; do
+            project_dir=$(dirname "$dir")
+            echo "Checking $project_dir"
+            cargo check --manifest-path "$project_dir/Cargo.toml"
+          done
