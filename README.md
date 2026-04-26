@@ -1,26 +1,48 @@
 # Hi, I'm Pradeep 👋
 
-### 🚀 Self-Taught Programmer | ML & Deep Learning Enthusiast
+### 🧠 Building at the intersection of **Math, Machine Learning, and Systems**
 
-I am a programmer based in Mumbai, focused on Numerical Linear Algebra, Machine Learning, and learning the **Rust** programming language. I believe in learning by doing, which is why I'm currently tackling the Project Euler challenges.
+I’m a self-driven engineer focused on **Numerical Linear Algebra, Optimization, and ML systems**, with a growing interest in **Rust for performance-critical computing**.
 
-- 🦀 **Currently Learning:** Advanced Rust (Ownership, Traits, and Async)
-- 🧠 **Focus:** Numerical Stability, SVD, and Optimization Algorithms (SGD, Adam)
-- 🎯 **Goal:** Complete the Project Euler before my death
-- 🛠️ **Environment:** WSL2, NVIDIA RTX 3070, `uv` for Python management
+I prefer **learning by building**, which is why I’m solving **Project Euler** problems in Rust — combining mathematical thinking with systems-level clarity.
+
+---
+
+### 🚀 What I’m Working On
+
+* 🦀 **Rust Deep Dive:** Ownership, Traits, Iterators, and performance patterns
+* 📐 **Math Focus:** SVD, numerical stability, and optimization (SGD, Adam)
+* 🧩 **Problem Solving:** Project Euler (math + code + reasoning)
+* ⚙️ **Systems Thinking:** Writing efficient, low-level, predictable code
 
 ---
 
 ### 📊 Project Euler Progress
-- **Solved:** 31 (Coin Sums), 32 (Pandigital Products), 55 (Lychrel Numbers), 89 (Roman Numerals)
-- **Current Challenge:** Towards my second badge - 50 problems:)
 
+* 🎯 **Solved:** 31, 32, 55, 89
+* 🚧 **Current Goal:** Reach 50 problems (second milestone)
+
+![Build](https://github.com/kpradeep06ds-star/eulerproject/actions/workflows/rust.yml/badge.svg)
+
+---
 
 ### 🛠️ Tech Stack
-![Rust](https://img.shields.io/badge/rust-%23000000.svg?style=for-the-badge&logo=rust&logoColor=white)
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
-![NVIDIA](https://img.shields.io/badge/nVIDIA-%2376B900.svg?style=for-the-badge&logo=nVIDIA&logoColor=white)
-![Rust](https://github.com/kpradeep06ds-star/eulerproject/actions/workflows/rust.yml/badge.svg)
+
+![Rust](https://img.shields.io/badge/rust-%23000000.svg?style=for-the-badge\&logo=rust\&logoColor=white)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge\&logo=python\&logoColor=ffdd54)
+![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge\&logo=PyTorch\&logoColor=white)
+![NVIDIA](https://img.shields.io/badge/NVIDIA-%2376B900.svg?style=for-the-badge\&logo=nVIDIA\&logoColor=white)
+
 ---
-*"Programming is not just about code; it's about understanding the logic behind the numbers."*
+
+### ⚡ Environment
+
+* WSL2 + Linux-first workflow
+* NVIDIA RTX 3070
+* Python via `uv`
+
+---
+
+### 💭 Philosophy
+
+> *“Understanding the math behind the code is the real edge.”*
