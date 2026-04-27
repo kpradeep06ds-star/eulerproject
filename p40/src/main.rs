@@ -32,6 +32,10 @@ fn logic(x:i64, hmap:HashMap<i64, i64>) -> i64{
 
     let mut diff:Vec<i64> = Vec::new();
     let inverted: HashMap<i64, i64> = hmap.clone().into_iter().map(|(k, v)| (v, k)).collect();
+    if x < 10{
+        return x;
+    }
+    
     for (_, v) in &hmap{
         if v < &x {
             diff.push(*v);
@@ -51,7 +55,7 @@ fn main() {
     let x = 7;
     let result = analytical_sol(x);
     let mut mul = 1;
-    for i in [10, 100, 1000, 10000, 100000, 1000000]{
+    for i in [1, 10, 100, 1000, 10000, 100000, 1000000]{
         let a = logic(i, result.clone());
         mul = mul*a;
     }
