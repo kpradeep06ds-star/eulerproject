@@ -1,13 +1,13 @@
-fn multiply(x:i32) -> i32 {
-    if (x % 3 == 0) && (x % 5 != 0){
-        return x;
-    } else if (x % 3 != 0) && (x % 5 == 0){
-        return x;
-    } else if (x % 3 == 0) && (x % 5 == 0){
-        return x;
-    }
-    0
-}
+// fn multiply(x:i32) -> i32 {
+//     if (x % 3 == 0) && (x % 5 != 0){
+//         return x;
+//     } else if (x % 3 != 0) && (x % 5 == 0){
+//         return x;
+//     } else if (x % 3 == 0) && (x % 5 == 0){
+//         return x;
+//     }
+//     0
+// }
 
 // fn main() {
 
